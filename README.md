@@ -74,7 +74,7 @@ Found a bug? Have a great idea for an improvement? We welcome contributions from
 
 Have questions or need help? Feel free to open an issue in this repository or reach out:
 
-Your Name - [@Gifftybabe](https://x.com/Gifftybabe) - email@example.com
+Giffty - [@Gifftybabe](https://x.com/Gifftybabe) - ulokangozi@gmail.com
 
 ## 🙏 Acknowledgments
 
