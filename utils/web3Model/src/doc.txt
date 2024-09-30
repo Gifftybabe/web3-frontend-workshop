@@ -1,0 +1,6 @@
+install etherjs - npm install ethers
+install web3modal - npm install web3modal
+install coinbase sdk - npm install @coinbase/wallet-sdk
+
+
+Confirm the version of ethers you are using on your package.json file as the syntax varies for each version
