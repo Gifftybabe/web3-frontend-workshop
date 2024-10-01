@@ -1,13 +1,13 @@
-
-// config/index.tsx
-
 import { defaultWagmiConfig } from '@web3modal/wagmi/react/config'
-
 import { cookieStorage, createStorage } from 'wagmi'
 import { base, baseSepolia, mainnet, sepolia } from 'wagmi/chains'
 
 // Your Reown Cloud project ID
-export const projectId = process.env.NEXT_PUBLIC_PRODUCT_ID;
+const projectId = process.env.NEXT_PUBLIC_PRODUCT_ID
+
+if (!projectId) {
+  throw new Error('Missing NEXT_PUBLIC_PRODUCT_ID')
+}
 
 // Create a metadata object
 const metadata = {
@@ -19,13 +19,17 @@ const metadata = {
 
 // Create wagmiConfig
 const chains = [base, baseSepolia, mainnet, sepolia] as const
+
 export const config = defaultWagmiConfig({
   chains,
   projectId,
   metadata,
   ssr: true,
+  auth: {
+    socials: ['google', 'x', 'github', 'discord', 'apple', 'facebook', 'farcaster'],
+    showWallets: false,
+  },
   storage: createStorage({
     storage: cookieStorage
-  }),
-  ...wagmiOptions // Optional - Override createConfig parameters
+  })
 })
