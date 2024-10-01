@@ -1,0 +1,33 @@
+Sign up with cloud.reown.com using your email
+Create a new project on reown leaving the link option blank and select appkit as product and nextjs as our platform
+create a nextjs project on your computer - npx create-next-app@latest
+cd into the project file
+go to your cloud and copy the install package using pnpm or npm as our install manager.
+Copy the code snippet and paste on your terminal to run
+install the dotenv  
+in your .env file, copy and paste the product key gotten from the LHS of your cloud dashbord productID
+Set up the configuration by creating a config folder in your root directory and inside the directory, create a file called index.tsx
+Go to cloud, click done in the quick start wizard and you will get a predefined code structure to copy and paste in your index.tsx file
+In your import copied code on wagmi chain, just add base and base sepolia to it
+Go to wagmi.docs under chain to see all the chains supported
+Don't forget to change your productid automaically populated in your index file to your env variable name
+remember to update the chain vairable with what was imported from the top of your index.tsx file
+ssr- service side rendering 
+In our root directory, create a folder called context and inside the folder a file called index.tsx 
+Go back to the cloud and copy the context provider code snipet given and paste in your index.tsx file
+in the layout.tsx file, add the following import to it:
+import { cookieToInitialState } from "wagmi";
+import Web3ModalProvider from "../../context";
+Change the metadata details to your app
+
+before the return keyword still in the index.tsx file of the context folder, initialize the cookie and wrap the children inside the web3ModalProvider
+
+The next thing is to use functionality to the frontend of our app by creating a new directory called components and inside it we create a file called ConnectBtn.tsx and scaffold a component project on it
+
+We can import the w3mbutton on our connectbtn page and then call the page on our page.tsx after cleaning it up 
+We should see our connect button
+To adjust the functionality of the button, go to the cloud, under Docs, it opens a new page then click on socials at the RHS, select nextjs and you will see all the settings you can make to the email and social option
+Navigate to the config folder on your code and under the config variable, add an auth object and add whatever settings you want such as socials, showWallet, and you can change the positions as fit
+
+Don't forget to add the use client directive at the top of your page.tsx file because everything will be rendered client side and also import the wagmi hooks which makes it really easy for apps to interact with ethereum and different chains
+Then we destructure address and isConnected from the useAccount hook
