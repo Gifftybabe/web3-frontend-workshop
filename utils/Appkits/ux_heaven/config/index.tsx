@@ -4,21 +4,21 @@
 import { defaultWagmiConfig } from '@web3modal/wagmi/react/config'
 
 import { cookieStorage, createStorage } from 'wagmi'
-import { mainnet, sepolia } from 'wagmi/chains'
+import { base, baseSepolia, mainnet, sepolia } from 'wagmi/chains'
 
 // Your Reown Cloud project ID
-export const projectId = 'e957ca013ed1987ebf1cf5fbe18abbb6'
+export const projectId = process.env.NEXT_PUBLIC_PRODUCT_ID;
 
 // Create a metadata object
 const metadata = {
   name: 'UX-Heaven',
-  description: 'AppKit Example',
+  description: 'Getting to learn AppKit',
   url: 'https://reown.com/appkit', // origin must match your domain & subdomain
   icons: ['https://assets.reown.com/reown-profile-pic.png']
 }
 
 // Create wagmiConfig
-const chains = [mainnet, sepolia] as const
+const chains = [base, baseSepolia, mainnet, sepolia] as const
 export const config = defaultWagmiConfig({
   chains,
   projectId,
