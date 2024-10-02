@@ -1,0 +1,27 @@
+for contract:
+npm init -y : to initialize the package file
+npm install --save-dev hardhat : to install hardhat
+npx hardhat init : to scaffold a hardhat project
+
+we write or use our default contract code
+write a test and deploy script for it
+
+
+we compile - npx hardhat compile
+we test - npx hardhat test
+run a node - npx hardhat node
+Add a test network of localhost to your metamask manually
+deploy your contract-  npx hardhat ignition deploy ./ignition/modules/Lock.ts --network localhost
+
+
+*for frontend
+- scaffold a react project 
+- clean up your file
+- go to bootsrap under download and get the installation command
+- import your bootstrap to your index/main file by using - import 'bootstrap/dist/css/bootstrap.min.css';
+
+-Get the layout like table, form etc codes from bootstrap and insert at the required places
+
+
+For integration
+install ether - npm install ethers
