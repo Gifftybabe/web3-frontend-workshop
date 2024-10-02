@@ -1,16 +1,13 @@
-async function main() {
-  const Voting = await ethers.getContractFactory("Voting");
+const  { buildModule } = require("@nomicfoundation/hardhat-ignition/modules");
 
-  // Start deployment, returning a promise that resolves to a contract object
-  const Voting_ = await Voting.deploy(["Ngozi", "Joy", "Sammy", "Lukman"], 90);
-  console.log("Contract address:", Voting_.address);
+const _candidateNames = ['Mark', 'James', 'Sammy', 'Peter', 'Guzbyte'];
+const _durationInMinutes = 86400;
 
+const VotingModule = buildModule("VotingModule", (m) => {
 
-}
+  const voting = m.contract("Voting", [_candidateNames, _durationInMinutes]);
 
-main()
- .then(() => process.exit(0))
- .catch(error => {
-   console.error(error);
-   process.exit(1);
- });
+  return { voting };
+});
+
+module.exports =  VotingModule;
