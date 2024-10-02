@@ -1,20 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div class="container">
   <div class="container text-center">
-  <div class="row">
+  <div class="row mt-5">
     <div class="col">
-      Column
+       <h3>Greeting</h3>
+        <p>Contract Balance: 0</p>
     </div>
     <div class="col">
-      Column
+      <form>
+      <div class="mb-3">
+        <input type="number" class="form-control" placeholder="0" value="test"/>
+        <button type="submit" class="btn btn-success mt-2">Deposit</button>
+
+      </div>
+    </form>
+
+    <form class="mt-5">
+      <div class="mb-3">
+        <input type="text" class="form-control" value="test"/>
+        <button type="submit" class="btn btn-dark mt-2">Change</button>
+
+      </div>
+    </form>
+   
     </div>
-    <div class="col">
-      Column
-    </div>
+   
   </div>
 </div>
 </div>
