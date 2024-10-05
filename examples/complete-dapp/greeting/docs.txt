@@ -27,3 +27,11 @@ deploy your contract-  npx hardhat ignition deploy ./ignition/modules/deploy.ts 
 For integration
 install ether - npm install ethers
 make refference to the doc - docs.ethers.io
+
+Connecting to metamask:
+Still using the same ethers doc, copy the code on connecting to metamask and paste in your App.js file with some reajustment
+
+writting to the blockchain:
+You need and instance of your deployed contract, so copy the connecting to the DAI contract on the docs code and paste on your app.js
+
+
