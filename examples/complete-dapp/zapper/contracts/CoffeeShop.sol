@@ -10,7 +10,7 @@ contract CoffeeShop {
     }
 
     Memo[] memos;
-    address payable owner;
+    address payable public owner;
 
     constructor() {
         owner = payable(msg.sender);
