@@ -11,8 +11,9 @@ we compile - npx hardhat compile
 we test - npx hardhat test
 run a node - npx hardhat node
 Add a test network of localhost to your metamask manually
-deploy your contract-  npx hardhat ignition deploy ./ignition/modules/Lock.ts --network localhost
+deploy your contract-  npx hardhat ignition deploy ./ignition/modules/deploy.ts --network localhost
 
+*0x5FbDB2315678afecb367f032d93F642f64180aa3*
 
 *for frontend
 - scaffold a react project 
@@ -25,3 +26,4 @@ deploy your contract-  npx hardhat ignition deploy ./ignition/modules/Lock.ts --
 
 For integration
 install ether - npm install ethers
+make refference to the doc - docs.ethers.io
